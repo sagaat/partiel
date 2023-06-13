@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ListGame from './components/listGame';
 import AddGame from './components/addGame';
 import Header from './components/header';
+import Filter from './components/filter';
 
 export default function App() {
   const gameData = require('./data/game.json');
@@ -13,6 +14,8 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <Header gameList={gameList} />
+      {/* Le filtre n'est pas fonctionnel */}
+      {/* <Filter /> */}
       <ListGame gameData={gameList} />
       <AddGame setGameList={setGameList} />
     </SafeAreaView>
